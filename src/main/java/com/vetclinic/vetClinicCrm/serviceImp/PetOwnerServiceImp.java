@@ -2,6 +2,7 @@ package com.vetclinic.vetClinicCrm.serviceImp;
 
 import com.vetclinic.vetClinicCrm.common.CustomizedMapper;
 import com.vetclinic.vetClinicCrm.common.ResourceNotfoundException;
+import com.vetclinic.vetClinicCrm.model.dto.PetDto;
 import com.vetclinic.vetClinicCrm.model.dto.PetOwnerDto;
 import com.vetclinic.vetClinicCrm.model.entity.PetOwner;
 import com.vetclinic.vetClinicCrm.repostory.IPetOwnerRepostory;
@@ -59,8 +60,8 @@ public class PetOwnerServiceImp implements IPetOwnerService {
 
         return mapper.map(this.iPetOwnerRepostory.findAll(), new TypeToken<List<PetOwnerDto>>() {
         }.getType());
-        //We converted the entity type list which returned from the repository, to the dto type list
     }
+
 
     @Transactional(readOnly = true)
     @Override

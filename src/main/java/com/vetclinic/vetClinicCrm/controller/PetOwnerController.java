@@ -15,12 +15,6 @@ public class PetOwnerController {
     @Autowired
     private IPetOwnerService iPetOwnerService;
 
-//    @ResponseBody
-//    @RequestMapping("/hello")
-//    public String hello(){
-//        return "hello pet world";
-//    }
-
     @PostMapping
     @RequestMapping("/saveOwner")
     public ResponseEntity savePetOwner(@RequestBody PetOwnerDto petOwnerDto) {

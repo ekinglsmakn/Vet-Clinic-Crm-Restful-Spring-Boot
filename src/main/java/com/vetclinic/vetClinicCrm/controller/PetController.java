@@ -31,7 +31,7 @@ public class PetController {
     }
 
     @DeleteMapping
-    @RequestMapping(value = "/hardDeletePet/{id}")
+    @RequestMapping(value = "/deletePet/{id}")
     public ResponseEntity hardDeletePet(@PathVariable Long id) {
         this.iPetService.delete(id);
         return new ResponseEntity("The Delete Request Has Succeeded!", HttpStatus.ACCEPTED);
